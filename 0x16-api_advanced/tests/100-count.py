@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
 def count_words(sentence, words_to_count):
-    words = sentence.split()
     word_count = {}
 
-    for word in words:
-        if word in words_to_count:
+    for word in words_to_count:
+        if word.lower() in sentence.lower():
             if word in word_count:
                 word_count[word] += 1
             else:
